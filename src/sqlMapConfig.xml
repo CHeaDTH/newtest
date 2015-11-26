@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
+    "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<!-- 字节码增强、缓存启用、延迟加载、最大session、最大事物、最大请求数  -->
+	<settings enhancementEnabled="true" cacheModelsEnabled="true"
+		lazyLoadingEnabled="true" maxSessions="50" maxTransactions="10"
+		maxRequests="250" useStatementNamespaces="true" />
+	<!-- SQL MAPPER LIST -->
+
+	<!-- 实例配置-->
+	<sqlMap resource="config/mapper/xtwh/xtwh-yhgl-sqlmap.xml" />
+	<sqlMap resource="config/mapper/xtwh/xtwh-role-sqlmap.xml" />
+	<sqlMap resource="config/mapper/xtwh/xtwh-logs-sqlmap.xml" />
+	<sqlMap resource="config/mapper/news/news-news-sqlmap.xml" />
+	<sqlMap resource="config/mapper/doctor/doctor-doctor-sqlmap.xml" />
+	<sqlMap resource="config/mapper/resident/resident-resident-sqlmap.xml" />
+	<sqlMap resource="config/mapper/forum/forum-subject-sqlmap.xml" />
+	<sqlMap resource="config/mapper/forum/forum-post-sqlmap.xml" />
+	<sqlMap resource="config/mapper/sysinterface/sysinterface-sysinterface-sqlmap.xml" />	
+	<sqlMap resource="config/mapper/logs/logs-logs-sqlmap.xml" />
+	<sqlMap resource="config/mapper/order/order-order-sqlmap.xml" />
+	<sqlMap resource="config/mapper/serve/serve-serve-sqlmap.xml" />
+	<sqlMap resource="config/mapper/homepage/home-page-sqlmap.xml" />
+	<sqlMap resource="config/mapper/pushmessage/push-message-sqlmap.xml" />
+	<sqlMap resource="config/mapper/message/message-message-sqlmap.xml" />
+	<sqlMap resource="config/mapper/datamodel/data-model-sqlmap.xml" />
+	<sqlMap resource="config/mapper/inquiry/inquiry-inquiry-sqlmap.xml" />
+	<sqlMap resource="config/mapper/operatemanage/operate-operate-sqlmap.xml" />	
+</sqlMapConfig>

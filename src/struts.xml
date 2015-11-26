@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.multipart.maxSize" value="50000000" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.configuration.xml.reload" value="false"></constant>
+	<constant name="struts.custom.i18n.resources" value="message" />
+	<constant name="struts.ui.theme" value="simple" />
+	<constant name="struts.ui.templateDir" value="template" />
+	<constant name="struts.ui.templateSuffix" value="ftl" />
+    <constant name="struts.url.includeParams" value="get" />
+	<constant name="struts.locale" value="zh_CN" />
+	
+	<package name="anxin" extends="struts-default">
+        <!-- 配置自定义拦截器LoginedCheckInterceptor -->
+        <interceptors>
+            <interceptor name="loginedCheck" class="com.yktpt.base.interceptor.LoginedCheckInterceptor"/>
+            <interceptor-stack name="mystack">
+                <interceptor-ref name="loginedCheck" />
+                <interceptor-ref name="defaultStack" />
+            </interceptor-stack>
+        </interceptors>        
+    
+        <!-- 定义全局result -->
+        <global-results>
+            <!-- 定义名为exception的全局result -->
+            <result name="tologin">/sessionout.jsp</result>
+        </global-results>
+        
+    </package>   
+	
+	<include file="config/struts/struts-login.xml" />
+	<include file="config/struts/struts-usermanager.xml" />
+	<include file="config/struts/struts-rolemanager.xml" />
+	<include file="config/struts/struts-newsmanager.xml" />
+	<include file="config/struts/struts-doctormanager.xml" />
+	<include file="config/struts/struts-residentmanager.xml" />
+	<include file="config/struts/struts-forummanager.xml" />
+	<include file="config/struts/struts-sysinterfacemanager.xml" />	
+	<include file="config/struts/struts-logs.xml" />
+	<include file="config/struts/struts-ordermanager.xml" />
+	<include file="config/struts/struts-servemanager.xml" />	
+	<include file="config/struts/struts-json.xml" />
+	<include file="config/struts/struts-homepage.xml" />
+	<include file="config/struts/struts-itemmanage.xml" />
+	<include file="config/struts/struts-messagemanager.xml" />
+	<include file="config/struts/struts-datamodel.xml" />
+	<include file="config/struts/struts-inquirymanager.xml" />
+	<include file="config/struts/struts-operatemanage.xml" />
+	<include file="config/struts/struts-doctorrecom.xml" />
+</struts>
